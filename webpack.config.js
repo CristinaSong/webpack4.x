@@ -7,3 +7,6 @@ module.exports = {
 // // 行不行？目前不行 // 这是ES6中向外导出模块的API与之对应的是 import ** from ‘标识符’
 // export default {}
 // 哪些特性Node支持呢? 如果chrome浏览器支持哪些，Node就支持哪些，node.js是基于Chrome V8引擎的JS运行环境
+
+// webpack-dev-server打包好的main.js是托管到了内存中，所以项目根目录中看不到
+//但是我们可以认为，在项目根目录中，有一个看不见的main.js
