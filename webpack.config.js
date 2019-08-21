@@ -8,12 +8,22 @@ const htmlPlugin = new HtmlWebPackPlugin({
 })
 
 // 向外暴露一个打包的配置对象，因为webpack是基于Node构建的，所有webpack支持所有Node API和语法
+// webpack默认只能打包处理.js后缀名类型的文件；像.png .vue无法主动处理，所有要配置第三方的loader
 module.exports = {
     mode: 'production', // development production
     // webpack4.x提供了约定大于配置的概念；目的为了尽量减少配置文件的体积，默认的打包入口路径是src->index.js
     plugins: [
         htmlPlugin
-    ]
+    ],
+    module: { // 所有第三方 模块的配置规则
+        rules: [{
+            test: /\.js|jsx$/,
+            use: 'babel-loader',
+            exclude: /node_modules/
+        }, // 千万不要忘记添加exclude排除项,不然会报错
+        ]
+
+    }
 }
 
 // // 行不行？目前不行 // 这是ES6中向外导出模块的API与之对应的是 import ** from ‘标识符’
