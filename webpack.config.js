@@ -23,6 +23,12 @@ module.exports = {
         }, // 千万不要忘记添加exclude排除项,不然会报错
         ]
 
+    },
+    resolve: {
+        extensions: ['.js', '.jsx', '.json'], // 表示这几个文件的后缀名导入的时候可以省略不写
+        alias: {
+            '@': path.join(__dirname, './src') // 这样@就表示项目根目录中src这一层路径
+        }
     }
 }
 
