@@ -16,13 +16,23 @@ module.exports = {
         htmlPlugin
     ],
     module: { // 所有第三方 模块的配置规则
-        rules: [{
-            test: /\.js|jsx$/,
-            use: 'babel-loader',
-            exclude: /node_modules/
-        }, // 千万不要忘记添加exclude排除项,不然会报错
-        ]
+        rules: [
+            {test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/}, // 千万不要忘记添加exclude排除项,不然会报错
+            // 可以在css-loader之后，通过？追加参数,参数和参数通过&连接
+            // 其中，有个固定参数，叫做modules，表示为普通的css样式表，启动模块化
+            {   test: /\.css$/,
+                use:[
+                    {loader: 'style-loader'},
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {localIdentName:'[path][name]-[local]-[hash:base64:5]'}
+                        }
+                    }]
+            }, // 打包处理css样式表的第三方loader
+            // {test: /\.css$/, use:['style-loader', 'css-loader?modules&localIdentName=[path][name]-[local]-[hash:5]']}, // 打包处理css，新版weppackApi不支持这种写法
 
+        ]
     },
     resolve: {
         extensions: ['.js', '.jsx', '.json'], // 表示这几个文件的后缀名导入的时候可以省略不写

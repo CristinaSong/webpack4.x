@@ -1,0 +1,6 @@
+/* css模块化指针对类选择器和id选择器生效，不会将标签选择器模块化 */
+.title {
+    color: red;
+    text-align: center;
+    font-weight: 500
+}
