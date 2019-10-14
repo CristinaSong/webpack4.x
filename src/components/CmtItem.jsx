@@ -25,7 +25,7 @@ console.log(cmtItem,'cmtItem')
 export default function CmtItem(props) {
     return <div className={cmtItem.item}>
     <h2>111</h2>
-    <h1 className={cmtItem.user}>评论人：{props.user}</h1>
+    <h1 className={cmtItem.user}>评论人1：{props.user}</h1>
     <p className={cmtItem.contend}>评论内容：{props.content}</p>
 </div>
 }
