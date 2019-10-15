@@ -26,7 +26,7 @@ export default function CmtItem(props) {
     return <div className={cmtItem.item}>
     <h2>111</h2>
     <h1 className={cmtItem.user}>评论人：{props.user}</h1>
-    <p className={cmtItem.contend}>评论内容：def{props.content}</p>
+    <p className={cmtItem.contend}>评论内容2：def{props.content}</p>
 </div>
 }
 
