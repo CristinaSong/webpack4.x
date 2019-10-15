@@ -30,7 +30,7 @@ module.exports = {
                         }
                     }]
             }, // 打包处理css样式表的第三方loader
-            // {test: /\.css$/, use:['style-loader', 'css-loader?modules&localIdentName=[path][name]-[local]-[hash:5]']}, // 打包处理css，新版weppackApi不支持这种写法
+            // {test: /\.css$/, use:['style-loader', 'css-loader?modules&localIdentName=[path][name]-[local]-[hash:5]']}, // 打包处理css，新版webpackApi不支持这种写法
 
         ]
     },
