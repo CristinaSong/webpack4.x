@@ -19,7 +19,7 @@ const contentStyle = {fontSize: '12px'}
 // import styles from '@/components/styles'
 
 // 模块化样式表
-import cmtItem from '@/css/cmtItem.css' // .css文件记得写后缀名
+import cmtItem from '@/css/cmtItem.scss' // .css文件记得写后缀名
 console.log(cmtItem,'cmtItem')
 
 export default function CmtItem(props) {
