@@ -4,10 +4,11 @@ import React from 'react' // 创建组件，虚拟DOM元素，生命周期
 import ReactDOM from 'react-dom' // 把创建好的 组件 和 虚拟DOM 放到页面上展示
 
 
-import CmtList from '@/components/CmtList'
-
-ReactDOM.render(<div>111
-    <CmtList></CmtList>
+// import CmtList from '@/components/CmtList'
+import BindEvent from '@/components/BindEvent'
+ReactDOM.render(<div>
+    {/* <CmtList></CmtList> */}
+    <BindEvent></BindEvent>
 </div>, document.getElementById('app'))
 
 
