@@ -71,10 +71,16 @@ export default class BindEvent extends React.Component {
     show=(s1, s2) => {
        // 在React中，推荐使用this.setState({})修改状态值
        this.setState({
-           msg: '123' + s1 + s2
+           msg: '123' + s1 + s2,
+           info: {
+               age: 3,
+               name: 'gsx-3',
+               color: 'blue',
+           }
        }, function(){
             console.log(this.state.msg,'this.state.msg')
-       })
-    }
+       })}
+
+
 }
 
