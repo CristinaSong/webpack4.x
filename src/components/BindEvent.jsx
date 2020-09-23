@@ -80,7 +80,5 @@ export default class BindEvent extends React.Component {
        }, function(){
             console.log(this.state.msg,'this.state.msg')
        })}
-
-
 }
 

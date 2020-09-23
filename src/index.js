@@ -5,10 +5,10 @@ import ReactDOM from 'react-dom' // 把创建好的 组件 和 虚拟DOM 放到�
 
 
 // import CmtList from '@/components/CmtList'
-import BindEvent from '@/components/BindEvent'
+import Hook from '@/components/Hook'
 ReactDOM.render(<div>
     {/* <CmtList></CmtList> */}
-    <BindEvent></BindEvent>
+    <Hook></Hook>
 </div>, document.getElementById('app'))
 
 
