@@ -1,8 +1,4 @@
-import React from 'react' // 创建组件，虚拟DOM元素，生命周期
-// 第一层封装:将样式对象和UI结构分离
-const itemStyle = {border: '1px dashed #ccc', margin: '10px', padding: '10px', boxShadow: '0 0 10px #ccc'}
-const userStyle = {fontSize: '14px'}
-const contentStyle = {fontSize: '12px'}
+import React from 'react';
 
 // 第二层封装：合并成一个大的样式对象
 // const styles = {
@@ -19,14 +15,18 @@ const contentStyle = {fontSize: '12px'}
 // import styles from '@/components/styles'
 
 // 模块化样式表
-import cmtItem from '@/css/cmtItem.scss' // .css文件记得写后缀名
-console.log(cmtItem,'cmtItem')
+import cmtItem from '@/css/cmtItem.scss'; // 创建组件，虚拟DOM元素，生命周期
+// 第一层封装:将样式对象和UI结构分离
+const itemStyle = {border: '1px dashed #ccc', margin: '10px', padding: '10px', boxShadow: '0 0 10px #ccc'};
+const userStyle = {fontSize: '14px'};
+const contentStyle = {fontSize: '12px'}; // .css文件记得写后缀名
+console.log(cmtItem, 'cmtItem');
 
 export default function CmtItem(props) {
     return <div className={cmtItem.item}>
-    <h2>111</h2>
-    <h1 className={cmtItem.user}>评论人：{props.user}</h1>
-    <p className={cmtItem.contend}>评论内容：{props.content}</p>
-</div>
+        <h2>111</h2>
+        <h1 className={cmtItem.user}>评论人：{props.user}</h1>
+        <p className={cmtItem.contend}>评论内容：{props.content}</p>
+    </div>;
 }
 

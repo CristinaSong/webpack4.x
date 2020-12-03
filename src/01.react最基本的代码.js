@@ -1,6 +1,6 @@
 // 1. 这两个导入的时候，接收的成员名称，必须这么写
-import React from 'react' // 创建组件，虚拟DOM元素，生命周期
-import ReactDOM from 'react-dom' // 把创建好的 组件 和 虚拟DOM 放到页面上展示
+import React from 'react'; // 创建组件，虚拟DOM元素，生命周期
+import ReactDOM from 'react-dom'; // 把创建好的 组件 和 虚拟DOM 放到页面上展示
 
 
 // 2. 创建虚拟DOM元素
@@ -10,9 +10,9 @@ import ReactDOM from 'react-dom' // 把创建好的 组件 和 虚拟DOM 放到�
 // 参数n: 其它子节点
 // <h1 id="myh1" title='this is a h1'>这是一个大大的H1</h1>
 // const myh1 = React.createElement('h1', null, '这是一个大大的H1')
-const child = React.createElement('div', null, 'H1的子元素')
+const child = React.createElement('div', null, 'H1的子元素');
 
-const myh1 = React.createElement('h1', {id: 'myh1', title: 'this is a h1'}, '这是一个大大的H1', child)
+const myh1 = React.createElement('h1', {id: 'myh1', title: 'this is a h1'}, '这是一个大大的H1', child);
 
 // 渲染 页面上的DOM结构，最好的方法，就是写HTML代码
 // const mytest = <div>aaa</div>
@@ -20,7 +20,7 @@ const myh1 = React.createElement('h1', {id: 'myh1', title: 'this is a h1'}, '这
 // 3. 使用ReactDOM把虚拟DOM渲染到页面上
 // 参数1: 要渲染的那个虚拟DOM元素
 // 参数2: 指定页面上的DOM元素，当作容器
-ReactDOM.render(myh1, document.getElementById('app'))
+ReactDOM.render(myh1, document.getElementById('app'));
 // #app 会报Target container is not a DOM element 经过分析，猜测第二个参数接收的应该是一个DOM元素而不是选择器
 
 // vue的渲染方法
